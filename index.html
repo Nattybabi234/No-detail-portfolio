@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nathania Layeni | Portfolio</title>
+  <style>
+    /* Global Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0a0f1c;
+      color: white;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* Header / Hero Section */
+    header {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(to bottom right, #000000, #0a0f1c, #001f4d);
+      overflow: hidden;
+    }
+
+    nav {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      z-index: 3;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #1a73e8;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      z-index: 2;
+      position: relative;
+      animation: fadeInDown 1s ease-in-out forwards;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin: 15px 0;
+      z-index: 2;
+      position: relative;
+      animation: fadeInUp 1.5s ease-in-out forwards;
+    }
+
+    .cta-btn {
+      padding: 12px 24px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: white;
+      background: #1a73e8;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s, background 0.3s;
+      z-index: 2;
+      position: relative;
+      animation: fadeInUp 2s ease-in-out forwards;
+    }
+
+    .cta-btn:hover {
+      background: #1557b0;
+      transform: scale(1.1);
+    }
+
+    /* Hero Logo Background */
+    .hero-logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 400px;
+      height: 400px;
+      background: url("mainlogo.jpg") no-repeat center/contain;
+      opacity: 0.07;
+      transform: translate(-50%, -50%) scale(1);
+      z-index: 0;
+      transition: transform 0.5s ease-out;
+      pointer-events: none;
+      filter: brightness(0) invert(0); /* makes it darker */
+    }
+
+    /* Section Styling */
+    section {
+      padding: 80px 10%;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #1a73e8;
+    }
+
+    section p {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    /* Project Cards */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .project-card {
+      background: #111827;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    }
+
+    footer {
+      background: #000000;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Fade-in sections */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <header>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Background Logo -->
+    <div class="hero-logo" id="heroLogo"></div>
+
+    <h1>Nathania Layeni</h1>
+    <p>Web & Graphics Designer | Founder of Najaza Enterprises</p>
+    <a href="#contact"><button class="cta-btn">Hire Me</button></a>
+  </header>
+
+  <!-- About Me Section -->
+  <section id="about" class="fade-in">
+    <h2>About Me</h2>
+    <p>
+      I am a passionate web and graphics designer with a mission to bring creative ideas to life. 
+      Over the years, I’ve worked on diverse projects, from e-commerce platforms and branding 
+      to custom websites for small businesses. As the founder of <b>Najaza Enterprises</b>, 
+      I specialize in creating digital solutions that balance functionality with stunning design.  
+      <br><br>
+      My approach is simple: I listen, I design, and I deliver. Whether it’s crafting a bold 
+      brand identity, designing a responsive website, or developing engaging visuals for social media, 
+      I make sure every detail reflects the client’s vision. I believe design is not just how it looks— 
+      it’s how it works, and I’m committed to building experiences that leave a lasting impression.  
+      <br><br>
+      Based in Manchester, I aim to support entrepreneurs, startups, and growing businesses in 
+      presenting themselves confidently online, so they can focus on what matters most: 
+      connecting with their audience and scaling their brand.
+    </p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="fade-in">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>🌐 Vickiedazzles Stores</h3>
+        <p>Developed a responsive e-commerce platform with Firebase integration for smooth product and order management.</p>
+      </div>
+      <div class="project-card">
+        <h3>🎨 Graphics Portfolio</h3>
+        <p>Created branding, social media visuals, and logo designs for small businesses with consistent visual identity.</p>
+      </div>
+      <div class="project-card">
+        <h3>📱 Najaza Enterprises</h3>
+        <p>Built and branded my own digital services business offering web design, graphics design, and digital solutions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Nathania Layeni | Najaza Enterprises</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Fade-in sections on scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.2 };
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+    faders.forEach(fader => appearOnScroll.observe(fader));
+
+    // Parallax effect for hero logo
+    const heroLogo = document.getElementById('heroLogo');
+    window.addEventListener('scroll', () => {
+      let scrollY = window.scrollY;
+      heroLogo.style.transform = `translate(-50%, -50%) scale(${1 + scrollY * 0.0005})`;
+    });
+  </script>
+</body>
+</html>
